@@ -1,0 +1,26 @@
+<template>
+  <div>
+    <h2>Dogs for adoption</h2>
+    <b-table striped hover :items="dogs">
+      <template slot="name" slot-scope="dogs">
+        <a :href="`/pets/${dogs.index}`">{{ dogs.value }}</a>
+      </template>
+    </b-table>
+  </div>
+</template>
+
+<script>
+import dogs from '@/data/dogs.js'
+
+export default {
+  name: 'Dog',
+  data () {
+    return {
+      dogs
+    }
+  }
+}
+</script>
+
+<style scoped>
+</style>
