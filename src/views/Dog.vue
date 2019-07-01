@@ -10,14 +10,17 @@
 </template>
 
 <script>
-import dogs from '@/data/dogs.js'
+import { mapState } from 'vuex'
 
 export default {
   name: 'Dog',
   data () {
-    return {
-      dogs
-    }
+    return {}
+  },
+  computed: {
+    ...mapState([
+      'dogs'
+    ])
   }
 }
 </script>

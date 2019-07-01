@@ -10,14 +10,17 @@
 </template>
 
 <script>
-import cats from '@/data/cats.js'
+import { mapState } from 'vuex'
 
 export default {
   name: 'Cat',
   data () {
-    return {
-      cats
-    }
+    return {}
+  },
+  computed: {
+    ...mapState([
+      'cats'
+    ])
   }
 }
 </script>
