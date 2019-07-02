@@ -1,21 +1,23 @@
 <template>
   <div>
     <h2>Cats for adoption</h2>
-    <b-table striped hover :items="cats">
-      <template slot="name" slot-scope="cats">
-        <a :href="`/pets/cats/${cats.index}`">{{ cats.value }}</a>
-      </template>
-    </b-table>
+    <PetTable
+    v-bind:animals="cats"
+    />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import PetTable from '@/components/PetTable'
 
 export default {
   name: 'Cat',
   data () {
     return {}
+  },
+  components: {
+    PetTable
   },
   computed: {
     ...mapState([

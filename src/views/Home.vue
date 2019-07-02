@@ -67,7 +67,7 @@
       </b-form-group>
 
       <b-form-group id="petNotesGroup" label="Pet's notes" label-for="petNotes">
-        <b-form-textarea 
+        <b-form-textarea
           id="petNotes"
           v-model="pet.notes"
           placeholder="Enter pet's notes"
@@ -134,14 +134,14 @@ export default {
         }
       }
       this.addPet(payload)
-      this.pet.name = '',
-      this.pet.breed = '',
-      this.pet.species = '',
-      this.pet.gender = '',
-      this.pet.age = null,
-      this.pet.color = '',
-      this.pet.weight = null,
-      this.pet.location = '',
+      this.pet.name = ''
+      this.pet.breed = ''
+      this.pet.species = ''
+      this.pet.gender = ''
+      this.pet.age = null
+      this.pet.color = ''
+      this.pet.weight = null
+      this.pet.location = ''
       this.pet.notes = ''
       this.showPetForm = false
     }
